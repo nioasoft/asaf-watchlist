@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Asaf Watchlist</title>
+<meta name="description" content="Asaf's living one-page watchlist: movies, series, documentaries and reels worth watching." />
+<style>
+:root{--bg:#07080d;--panel:rgba(255,255,255,.07);--panel2:rgba(255,255,255,.11);--text:#f4f0e8;--muted:#afa79c;--line:rgba(255,255,255,.14);--gold:#f6c35f;--pink:#ff6f91;--cyan:#7ee7ff;--green:#94f59a;}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:radial-gradient(circle at 15% 0%,rgba(255,111,145,.28),transparent 28%),radial-gradient(circle at 80% 10%,rgba(126,231,255,.22),transparent 30%),linear-gradient(180deg,#07080d,#111018 48%,#07080d);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;}
+a{color:inherit} .wrap{width:min(1180px,calc(100% - 32px));margin:auto} header{min-height:72vh;display:grid;align-items:center;padding:54px 0 34px;position:relative;overflow:hidden} .hero{display:grid;gap:26px;grid-template-columns:1.08fr .92fr;align-items:center} .eyebrow{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--line);background:rgba(255,255,255,.06);padding:9px 13px;border-radius:999px;color:var(--muted);font-size:14px} .dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 18px var(--green)} h1{font-size:clamp(48px,9vw,112px);line-height:.86;margin:18px 0 12px;letter-spacing:-.08em} .grad{background:linear-gradient(90deg,var(--gold),var(--pink),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent} .lead{font-size:clamp(18px,2.2vw,26px);line-height:1.45;color:#ddd6cc;max-width:700px} .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px} .btn{text-decoration:none;border:1px solid var(--line);padding:13px 18px;border-radius:16px;background:rgba(255,255,255,.08);backdrop-filter:blur(10px)} .btn.primary{background:linear-gradient(135deg,var(--gold),var(--pink));color:#130d0f;border:0;font-weight:800} .poster{min-height:440px;border:1px solid var(--line);border-radius:34px;background:linear-gradient(145deg,rgba(255,255,255,.14),rgba(255,255,255,.04));box-shadow:0 30px 100px rgba(0,0,0,.42);position:relative;padding:24px;overflow:hidden} .poster:before{content:'';position:absolute;inset:-80px;background:conic-gradient(from 180deg,var(--gold),var(--pink),var(--cyan),var(--gold));filter:blur(60px);opacity:.23} .stack{position:relative;display:grid;gap:14px} .mini{direction:ltr;border-radius:22px;padding:18px;background:rgba(0,0,0,.32);border:1px solid var(--line)} .mini b{display:block;font-size:22px;margin-bottom:8px} .mini span{color:var(--muted)} .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px} .stat{border:1px solid var(--line);border-radius:22px;padding:16px;background:rgba(255,255,255,.06)} .stat strong{font-size:32px;display:block} .toolbar{position:sticky;top:0;z-index:10;padding:14px 0;background:rgba(7,8,13,.72);backdrop-filter:blur(18px);border-block:1px solid var(--line)} .tools{display:flex;gap:10px;align-items:center;flex-wrap:wrap} input{flex:1;min-width:230px;border:1px solid var(--line);background:rgba(255,255,255,.08);color:var(--text);padding:15px 16px;border-radius:18px;font-size:16px;outline:none} .chip{border:1px solid var(--line);background:rgba(255,255,255,.06);color:var(--text);border-radius:999px;padding:10px 13px;cursor:pointer} .chip.active{background:var(--text);color:#0b0b10} main{padding:34px 0 70px} .rail{margin:34px 0 52px} .sectionHead{display:flex;justify-content:space-between;gap:18px;align-items:end;margin-bottom:12px} h2{font-size:clamp(25px,4vw,44px);margin:0;letter-spacing:-.04em} .sectionHead span,.note{color:var(--muted)} .note{margin:0 0 16px;line-height:1.5} .grid{direction:ltr;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px} .card{direction:ltr;border:1px solid var(--line);border-radius:24px;padding:18px;background:linear-gradient(180deg,var(--panel2),var(--panel));min-height:220px;display:flex;flex-direction:column;transition:.2s transform,.2s border-color} .card:hover{transform:translateY(-4px);border-color:rgba(246,195,95,.5)} .cardTop{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:14px} .pill{font-size:12px;color:#0c0b10;background:var(--gold);border-radius:999px;padding:6px 9px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:70%} .year{color:var(--muted);font-size:13px} h3{font-size:24px;line-height:1.05;margin:0 0 10px;letter-spacing:-.03em} .card p{color:#d7d0c6;line-height:1.48;margin:0 0 12px} .pair{color:var(--cyan)!important} footer{margin-top:auto;color:var(--muted);font-size:12px;border-top:1px solid var(--line);padding-top:12px} .empty{display:none;text-align:center;color:var(--muted);padding:40px}
+@media(max-width:900px){.hero{grid-template-columns:1fr}.poster{min-height:auto}.grid{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr 1fr} h1{letter-spacing:-.055em}}
+</style>
+</head>
+<body>
+<header class="wrap">
+ <div class="hero">
+  <div>
+    <span class="eyebrow"><span class="dot"></span> Living watchlist · מתעדכן מהרילים</span>
+    <h1>Asaf<br><span class="grad">Watchlist</span></h1>
+    <p class="lead">עמוד אחד יפה לכל הסרטים, הסדרות והדוקומנטריים שאנחנו אוספים. אפשר לשלוח עוד רילים — אני אעדכן את הרשימה ואת האתר.</p>
+    <div class="actions"><a class="btn primary" href="#list">לרשימה</a><a class="btn" href="https://github.com/nioasoft/asaf-watchlist">GitHub</a></div>
+    <div class="stats"><div class="stat"><strong>74</strong><span>פריטים</span></div><div class="stat"><strong>10</strong><span>קטגוריות</span></div><div class="stat"><strong>2026-09-12</strong><span>עודכן</span></div></div>
+  </div>
+  <div class="poster"><div class="stack"><div class="mini"><b>Tonight?</b><span>Mind-bending, survival, limited series, cyber docs.</span></div><div class="mini"><b>Filter fast</b><span>Search by title, platform, genre, reel source.</span></div><div class="mini"><b>Always fresh</b><span>Generated from /asibrain/watchlist.md</span></div></div></div>
+ </div>
+</header>
+<div class="toolbar"><div class="wrap tools"><input id="q" placeholder="חיפוש: Chernobyl, Netflix, cyber, thriller…" /><button class="chip active" data-filter="all">הכול</button><button class="chip" data-filter="Movies">סרטים</button><button class="chip" data-filter="Series">סדרות</button><button class="chip" data-filter="Documentaries">דוקו</button></div></div>
+<main class="wrap" id="list"><section class="rail" id="documentaries-cybersecurity-hacker-culture">
+  <div class="sectionHead"><h2>Documentaries — Cybersecurity / hacker culture</h2><span>7 פריטים</span></div>
+  <p class="note">From IG reel DdIbfoPO2up by Scott Altiparmak, 2026-09-10. Framed as “7 documentaries every cybersecurity student needs to watch.”</p>
+  <div class="grid"><article class="card" data-search="zero days 2016 stuxnet, cyber weapons, and modern cyber warfare.  documentaries — cybersecurity / hacker culture" data-cat="Documentaries — Cybersecurity / hacker culture">
+  <div class="cardTop"><span class="pill">Documentaries — Cybersecurity / hacker culture</span><span class="year">2016</span></div>
+  <h3>Zero Days</h3>
+  <p>Stuxnet, cyber weapons, and modern cyber warfare.</p>
+  
+  
+</article><article class="card" data-search="citizenfour 2014 edward snowden, nsa surveillance, and digital privacy.  documentaries — cybersecurity / hacker culture" data-cat="Documentaries — Cybersecurity / hacker culture">
+  <div class="cardTop"><span class="pill">Documentaries — Cybersecurity / hacker culture</span><span class="year">2014</span></div>
+  <h3>Citizenfour</h3>
+  <p>Edward Snowden, NSA surveillance, and digital privacy.</p>
+  
+  
+</article><article class="card" data-search="the internet’s own boy: the story of aaron swartz 2014 internet freedom, computer law, and the aaron swartz case.  documentaries — cybersecurity / hacker culture" data-cat="Documentaries — Cybersecurity / hacker culture">
+  <div class="cardTop"><span class="pill">Documentaries — Cybersecurity / hacker culture</span><span class="year">2014</span></div>
+  <h3>The Internet’s Own Boy: The Story of Aaron Swartz</h3>
+  <p>Internet freedom, computer law, and the Aaron Swartz case.</p>
+  
+  
+</article><article class="card" data-search="we are legion: the story of the hacktivists 2012 anonymous, hacker culture, and hacktivism.  documentaries — cybersecurity / hacker culture" data-cat="Documentaries — Cybersecurity / hacker culture">
+  <div class="cardTop"><span class="pill">Documentaries — Cybersecurity / hacker culture</span><span class="year">2012</span></div>
+  <h3>We Are Legion: The Story of the Hacktivists</h3>
+  <p>Anonymous, hacker culture, and hacktivism.</p>
+  
+  
+</article><article class="card" data-search="deep web 2015 silk road, tor, bitcoin, and online anonymity.  documentaries — cybersecurity / hacker culture" data-cat="Documentaries — Cybersecurity / hacker culture">
+  <div class="cardTop"><span class="pill">Documentaries — Cybersecurity / hacker culture</span><span class="year">2015</span></div>
+  <h3>Deep Web</h3>
+  <p>Silk Road, Tor, Bitcoin, and online anonymity.</p>
+  
+  
+</article><article class="card" data-search="cyberbunker: the criminal underworld 2023 bulletproof hosting, cybercrime, and a criminal operation run from a former nato bunker.  documentaries — cybersecurity / hacker culture" data-cat="Documentaries — Cybersecurity / hacker culture">
+  <div class="cardTop"><span class="pill">Documentaries — Cybersecurity / hacker culture</span><span class="year">2023</span></div>
+  <h3>CyberBunker: The Criminal Underworld</h3>
+  <p>Bulletproof hosting, cybercrime, and a criminal operation run from a former NATO bunker.</p>
+  
+  
+</article><article class="card" data-search="defcon: the documentary 2013 inside def con and the hacker community.  documentaries — cybersecurity / hacker culture" data-cat="Documentaries — Cybersecurity / hacker culture">
+  <div class="cardTop"><span class="pill">Documentaries — Cybersecurity / hacker culture</span><span class="year">2013</span></div>
+  <h3>DEFCON: The Documentary</h3>
+  <p>Inside DEF CON and the hacker community.</p>
+  
+  
+</article></div>
+</section><section class="rail" id="series-multi-season-binge-recommendations">
+  <div class="sectionHead"><h2>Series — Multi-season binge recommendations</h2><span>6 פריטים</span></div>
+  <p class="note">From IG reel by tv_friend2, 2026-07-03. Caption: “6 shows with multiple seasons to binge watch.”</p>
+  <div class="grid"><article class="card" data-search="the fall peacock dark crime thriller. detective hunts a serial killer in belfast; tense, psychological, and good for a darker binge. ig reel dabw0papbv8 by tv_friend2, 2026-07-03. series — multi-season binge recommendations" data-cat="Series — Multi-season binge recommendations">
+  <div class="cardTop"><span class="pill">Series — Multi-season binge recommendations</span><span class="year">Peacock</span></div>
+  <h3>The Fall</h3>
+  <p>Dark crime thriller. Detective hunts a serial killer in Belfast; tense, psychological, and good for a darker binge.</p>
+  
+  <footer>IG reel DaBw0pAPBV8 by tv_friend2, 2026-07-03.</footer>
+</article><article class="card" data-search="banshee hbo max action/crime thriller. ex-con assumes the identity of a small-town sheriff and gets pulled into violent local crime. ig reel dabw0papbv8 by tv_friend2, 2026-07-03. series — multi-season binge recommendations" data-cat="Series — Multi-season binge recommendations">
+  <div class="cardTop"><span class="pill">Series — Multi-season binge recommendations</span><span class="year">HBO Max</span></div>
+  <h3>Banshee</h3>
+  <p>Action/crime thriller. Ex-con assumes the identity of a small-town sheriff and gets pulled into violent local crime.</p>
+  
+  <footer>IG reel DaBw0pAPBV8 by tv_friend2, 2026-07-03.</footer>
+</article><article class="card" data-search="servant apple tv psychological horror/thriller from m. night shyamalan. a grieving couple hires a nanny and reality starts to twist around their child. ig reel dabw0papbv8 by tv_friend2, 2026-07-03. series — multi-season binge recommendations" data-cat="Series — Multi-season binge recommendations">
+  <div class="cardTop"><span class="pill">Series — Multi-season binge recommendations</span><span class="year">Apple TV</span></div>
+  <h3>Servant</h3>
+  <p>Psychological horror/thriller from M. Night Shyamalan. A grieving couple hires a nanny and reality starts to twist around their child.</p>
+  
+  <footer>IG reel DaBw0pAPBV8 by tv_friend2, 2026-07-03.</footer>
+</article><article class="card" data-search="slow horses apple tv spy thriller/dark comedy. disgraced mi5 agents in a dumping-ground unit still get pulled into serious intelligence operations. ig reel dabw0papbv8 by tv_friend2, 2026-07-03. series — multi-season binge recommendations" data-cat="Series — Multi-season binge recommendations">
+  <div class="cardTop"><span class="pill">Series — Multi-season binge recommendations</span><span class="year">Apple TV</span></div>
+  <h3>Slow Horses</h3>
+  <p>Spy thriller/dark comedy. Disgraced MI5 agents in a dumping-ground unit still get pulled into serious intelligence operations.</p>
+  
+  <footer>IG reel DaBw0pAPBV8 by tv_friend2, 2026-07-03.</footer>
+</article><article class="card" data-search="justified hulu crime/western drama. u.s. marshal raylan givens brings old-school lawman energy to kentucky crime cases. ig reel dabw0papbv8 by tv_friend2, 2026-07-03. series — multi-season binge recommendations" data-cat="Series — Multi-season binge recommendations">
+  <div class="cardTop"><span class="pill">Series — Multi-season binge recommendations</span><span class="year">Hulu</span></div>
+  <h3>Justified</h3>
+  <p>Crime/western drama. U.S. Marshal Raylan Givens brings old-school lawman energy to Kentucky crime cases.</p>
+  
+  <footer>IG reel DaBw0pAPBV8 by tv_friend2, 2026-07-03.</footer>
+</article><article class="card" data-search="derry girls netflix fast, light comedy. teen girls in 1990s northern ireland; good as a lighter binge between heavier shows. ig reel dabw0papbv8 by tv_friend2, 2026-07-03. series — multi-season binge recommendations" data-cat="Series — Multi-season binge recommendations">
+  <div class="cardTop"><span class="pill">Series — Multi-season binge recommendations</span><span class="year">Netflix</span></div>
+  <h3>Derry Girls</h3>
+  <p>Fast, light comedy. Teen girls in 1990s Northern Ireland; good as a lighter binge between heavier shows.</p>
+  
+  <footer>IG reel DaBw0pAPBV8 by tv_friend2, 2026-07-03.</footer>
+</article></div>
+</section><section class="rail" id="movies-survival-end-of-the-world-thrillers">
+  <div class="sectionHead"><h2>Movies — Survival / end-of-the-world thrillers</h2><span>3 פריטים</span></div>
+  <p class="note">From IG reel DcTvWVkTM1G by movieguycam, 2026-09-12. Framed as “three movies on Netflix that will make you question what would you do to survive?”</p>
+  <div class="grid"><article class="card" data-search="camp x-ray netflix, 2014 drama/survival-of-the-mind story with kristen stewart as a young soldier assigned to guantánamo bay who forms a bond with a detainee and starts questioning the system around her. ig reel dctvwvktm1g by movieguycam, 2026-09-12. movies — survival / end-of-the-world thrillers" data-cat="Movies — Survival / end-of-the-world thrillers">
+  <div class="cardTop"><span class="pill">Movies — Survival / end-of-the-world thrillers</span><span class="year">Netflix, 2014</span></div>
+  <h3>Camp X-Ray</h3>
+  <p>Drama/survival-of-the-mind story with Kristen Stewart as a young soldier assigned to Guantánamo Bay who forms a bond with a detainee and starts questioning the system around her.</p>
+  
+  <footer>IG reel DcTvWVkTM1G by movieguycam, 2026-09-12.</footer>
+</article><article class="card" data-search="apex netflix, 2026 survival thriller about a woman pushed physically and mentally in the wilderness, where every decision matters. ig reel dctvwvktm1g by movieguycam, 2026-09-12. movies — survival / end-of-the-world thrillers" data-cat="Movies — Survival / end-of-the-world thrillers">
+  <div class="cardTop"><span class="pill">Movies — Survival / end-of-the-world thrillers</span><span class="year">Netflix, 2026</span></div>
+  <h3>Apex</h3>
+  <p>Survival thriller about a woman pushed physically and mentally in the wilderness, where every decision matters.</p>
+  
+  <footer>IG reel DcTvWVkTM1G by movieguycam, 2026-09-12.</footer>
+</article><article class="card" data-search="leave the world behind netflix, 2023 apocalyptic psychological thriller about a family getaway collapsing after strangers arrive, communications go down, and nobody knows what is happening outside. ig reel dctvwvktm1g by movieguycam, 2026-09-12. movies — survival / end-of-the-world thrillers" data-cat="Movies — Survival / end-of-the-world thrillers">
+  <div class="cardTop"><span class="pill">Movies — Survival / end-of-the-world thrillers</span><span class="year">Netflix, 2023</span></div>
+  <h3>Leave the World Behind</h3>
+  <p>Apocalyptic psychological thriller about a family getaway collapsing after strangers arrive, communications go down, and nobody knows what is happening outside.</p>
+  
+  <footer>IG reel DcTvWVkTM1G by movieguycam, 2026-09-12.</footer>
+</article></div>
+</section><section class="rail" id="movies-mind-bending-sci-fi-psychological-thrillers">
+  <div class="sectionHead"><h2>Movies — Mind-bending sci-fi / psychological thrillers</h2><span>9 פריטים</span></div>
+  <p class="note">Additional Prime Video mind-benders from IG reel by movieguycam, 2026-09-10. Framed as “three movies on Prime Video that will genuinely alter your brain chemistry.”</p>
+  <div class="grid"><article class="card" data-search="coherence 2013 low-budget sci-fi thriller. friends gather for a dinner party while a comet passes overhead and reality starts fracturing; recommended for real-time panic, paranoia, and “what is happening?” tension. ig reel dzf737nzltj by movieguycam, 2026-06-19. movies — mind-bending sci-fi / psychological thrillers" data-cat="Movies — Mind-bending sci-fi / psychological thrillers">
+  <div class="cardTop"><span class="pill">Movies — Mind-bending sci-fi / psychological thrillers</span><span class="year">2013</span></div>
+  <h3>Coherence</h3>
+  <p>Low-budget sci-fi thriller. Friends gather for a dinner party while a comet passes overhead and reality starts fracturing; recommended for real-time panic, paranoia, and “what is happening?” tension.</p>
+  
+  <footer>IG reel DZf737nzLtj by movieguycam, 2026-06-19.</footer>
+</article><article class="card" data-search="vivarium 2019 surreal sci-fi/horror thriller with jesse eisenberg. a couple tours a suburban house and becomes trapped in an endless identical neighborhood; strange, claustrophobic, and unsettling. ig reel dzf737nzltj by movieguycam, 2026-06-19. movies — mind-bending sci-fi / psychological thrillers" data-cat="Movies — Mind-bending sci-fi / psychological thrillers">
+  <div class="cardTop"><span class="pill">Movies — Mind-bending sci-fi / psychological thrillers</span><span class="year">2019</span></div>
+  <h3>Vivarium</h3>
+  <p>Surreal sci-fi/horror thriller with Jesse Eisenberg. A couple tours a suburban house and becomes trapped in an endless identical neighborhood; strange, claustrophobic, and unsettling.</p>
+  
+  <footer>IG reel DZf737nzLtj by movieguycam, 2026-06-19.</footer>
+</article><article class="card" data-search="the signal 2014 sci-fi mystery/thriller. two friends track a mysterious hacker and the story suddenly turns into something very different; best watched knowing as little as possible. ig reel dzf737nzltj by movieguycam, 2026-06-19. movies — mind-bending sci-fi / psychological thrillers" data-cat="Movies — Mind-bending sci-fi / psychological thrillers">
+  <div class="cardTop"><span class="pill">Movies — Mind-bending sci-fi / psychological thrillers</span><span class="year">2014</span></div>
+  <h3>The Signal</h3>
+  <p>Sci-fi mystery/thriller. Two friends track a mysterious hacker and the story suddenly turns into something very different; best watched knowing as little as possible.</p>
+  
+  <footer>IG reel DZf737nzLtj by movieguycam, 2026-06-19.</footer>
+</article><article class="card" data-search="mirage netflix spanish sci-fi thriller. a woman communicates through an old tv with a boy living 25 years in the past, saves him, then wakes into a different life where only she remembers the original reality. ig reel dantujtzn7y by movieguycam, 2026-07-17. movies — mind-bending sci-fi / psychological thrillers" data-cat="Movies — Mind-bending sci-fi / psychological thrillers">
+  <div class="cardTop"><span class="pill">Movies — Mind-bending sci-fi / psychological thrillers</span><span class="year">Netflix</span></div>
+  <h3>Mirage</h3>
+  <p>Spanish sci-fi thriller. A woman communicates through an old TV with a boy living 25 years in the past, saves him, then wakes into a different life where only she remembers the original reality.</p>
+  
+  <footer>IG reel DantUjTzn7y by movieguycam, 2026-07-17.</footer>
+</article><article class="card" data-search="the soul netflix near-future sci-fi murder mystery. a prosecutor investigates a billionaire’s death and the case expands into memory transfer, consciousness, and identity. ig reel dantujtzn7y by movieguycam, 2026-07-17. movies — mind-bending sci-fi / psychological thrillers" data-cat="Movies — Mind-bending sci-fi / psychological thrillers">
+  <div class="cardTop"><span class="pill">Movies — Mind-bending sci-fi / psychological thrillers</span><span class="year">Netflix</span></div>
+  <h3>The Soul</h3>
+  <p>Near-future sci-fi murder mystery. A prosecutor investigates a billionaire’s death and the case expands into memory transfer, consciousness, and identity.</p>
+  
+  <footer>IG reel DantUjTzn7y by movieguycam, 2026-07-17.</footer>
+</article><article class="card" data-search="it’s what’s inside netflix creative body-swap psychological thriller/comedy. college friends reunite before a wedding, use a device that swaps bodies, and secrets spiral the night out of control. ig reel dantujtzn7y by movieguycam, 2026-07-17. movies — mind-bending sci-fi / psychological thrillers" data-cat="Movies — Mind-bending sci-fi / psychological thrillers">
+  <div class="cardTop"><span class="pill">Movies — Mind-bending sci-fi / psychological thrillers</span><span class="year">Netflix</span></div>
+  <h3>It’s What’s Inside</h3>
+  <p>Creative body-swap psychological thriller/comedy. College friends reunite before a wedding, use a device that swaps bodies, and secrets spiral the night out of control.</p>
+  
+  <footer>IG reel DantUjTzn7y by movieguycam, 2026-07-17.</footer>
+</article><article class="card" data-search="triangle prime video, 2009 survival thriller that starts with friends caught in a storm and boarding an abandoned ocean liner, then turns into a time-loop/mind-bender. ig reel ddj1tp7snbr by movieguycam, 2026-09-10. movies — mind-bending sci-fi / psychological thrillers" data-cat="Movies — Mind-bending sci-fi / psychological thrillers">
+  <div class="cardTop"><span class="pill">Movies — Mind-bending sci-fi / psychological thrillers</span><span class="year">Prime Video, 2009</span></div>
+  <h3>Triangle</h3>
+  <p>Survival thriller that starts with friends caught in a storm and boarding an abandoned ocean liner, then turns into a time-loop/mind-bender.</p>
+  
+  <footer>IG reel DdJ1Tp7sNbR by movieguycam, 2026-09-10.</footer>
+</article><article class="card" data-search="the endless prime video, 2017 cosmic sci-fi/horror about two brothers returning to the ufo cult they escaped, where time and reality feel wrong. ig reel ddj1tp7snbr by movieguycam, 2026-09-10. movies — mind-bending sci-fi / psychological thrillers" data-cat="Movies — Mind-bending sci-fi / psychological thrillers">
+  <div class="cardTop"><span class="pill">Movies — Mind-bending sci-fi / psychological thrillers</span><span class="year">Prime Video, 2017</span></div>
+  <h3>The Endless</h3>
+  <p>Cosmic sci-fi/horror about two brothers returning to the UFO cult they escaped, where time and reality feel wrong.</p>
+  
+  <footer>IG reel DdJ1Tp7sNbR by movieguycam, 2026-09-10.</footer>
+</article><article class="card" data-search="the vast of night prime video, 2019 1950s new mexico sci-fi mystery about two teens at a radio station investigating an unexplained audio frequency; slow-burn and creepy. ig reel ddj1tp7snbr by movieguycam, 2026-09-10. movies — mind-bending sci-fi / psychological thrillers" data-cat="Movies — Mind-bending sci-fi / psychological thrillers">
+  <div class="cardTop"><span class="pill">Movies — Mind-bending sci-fi / psychological thrillers</span><span class="year">Prime Video, 2019</span></div>
+  <h3>The Vast of Night</h3>
+  <p>1950s New Mexico sci-fi mystery about two teens at a radio station investigating an unexplained audio frequency; slow-burn and creepy.</p>
+  
+  <footer>IG reel DdJ1Tp7sNbR by movieguycam, 2026-09-10.</footer>
+</article></div>
+</section><section class="rail" id="series-hbo-max-recommendations">
+  <div class="sectionHead"><h2>Series (HBO Max recommendations)</h2><span>3 פריטים</span></div>
+  
+  <div class="grid"><article class="card" data-search="the outsider hbo, 2020 crime/supernatural thriller. a boy is murdered and the evidence points clearly to one man, except he has an alibi placing him elsewhere at the same time; starts as crime mystery and turns darker/creepier. ig reel by doradane_film, 2026-06-09. series (hbo max recommendations)" data-cat="Series (HBO Max recommendations)">
+  <div class="cardTop"><span class="pill">Series (HBO Max recommendations)</span><span class="year">HBO, 2020</span></div>
+  <h3>The Outsider</h3>
+  <p>Crime/supernatural thriller. A boy is murdered and the evidence points clearly to one man, except he has an alibi placing him elsewhere at the same time; starts as crime mystery and turns darker/creepier.</p>
+  
+  <footer>IG reel by doradane_film, 2026-06-09.</footer>
+</article><article class="card" data-search="the leftovers hbo, 2014–17 emotional mystery/drama. 2% of the world’s population disappears without explanation; the focus is on grief, loss, and how the people left behind search for meaning. ig reel by doradane_film, 2026-06-09. series (hbo max recommendations)" data-cat="Series (HBO Max recommendations)">
+  <div class="cardTop"><span class="pill">Series (HBO Max recommendations)</span><span class="year">HBO, 2014–17</span></div>
+  <h3>The Leftovers</h3>
+  <p>Emotional mystery/drama. 2% of the world’s population disappears without explanation; the focus is on grief, loss, and how the people left behind search for meaning.</p>
+  
+  <footer>IG reel by doradane_film, 2026-06-09.</footer>
+</article><article class="card" data-search="task hbo, 2025 crime drama starring mark ruffalo. fbi agent leads a task force trying to stop a string of violent robberies; recommended for realistic performances and escalating tension. ig reel by doradane_film, 2026-06-09. series (hbo max recommendations)" data-cat="Series (HBO Max recommendations)">
+  <div class="cardTop"><span class="pill">Series (HBO Max recommendations)</span><span class="year">HBO, 2025</span></div>
+  <h3>Task</h3>
+  <p>Crime drama starring Mark Ruffalo. FBI agent leads a task force trying to stop a string of violent robberies; recommended for realistic performances and escalating tension.</p>
+  
+  <footer>IG reel by doradane_film, 2026-06-09.</footer>
+</article></div>
+</section><section class="rail" id="series-netflix-may-2026">
+  <div class="sectionHead"><h2>Series (Netflix May 2026)</h2><span>3 פריטים</span></div>
+  
+  <div class="grid"><article class="card" data-search="legends netflix, releases 2026-05-07 crime drama. based on a real 90s uk story: customs officers thrown into deep undercover work with little training, building fake identities to infiltrate drug gangs; the longer they stay under, the more they risk losing themselves. ig reel 2026-05-15. series (netflix may 2026)" data-cat="Series (Netflix May 2026)">
+  <div class="cardTop"><span class="pill">Series (Netflix May 2026)</span><span class="year">Netflix, releases 2026-05-07</span></div>
+  <h3>Legends</h3>
+  <p>Crime drama. Based on a real 90s UK story: customs officers thrown into deep undercover work with little training, building fake identities to infiltrate drug gangs; the longer they stay under, the more they risk losing themselves.</p>
+  
+  <footer>IG reel 2026-05-15.</footer>
+</article><article class="card" data-search="nemesis netflix, releases 2026-05-14 psychological crime thriller. elite criminal mastermind vs. an equally intelligent, obsessed detective; every episode is a battle of strategy, manipulation, and mind games where both characters bend their morals. ig reel 2026-05-15. series (netflix may 2026)" data-cat="Series (Netflix May 2026)">
+  <div class="cardTop"><span class="pill">Series (Netflix May 2026)</span><span class="year">Netflix, releases 2026-05-14</span></div>
+  <h3>Nemesis</h3>
+  <p>Psychological crime thriller. Elite criminal mastermind vs. an equally intelligent, obsessed detective; every episode is a battle of strategy, manipulation, and mind games where both characters bend their morals.</p>
+  
+  <footer>IG reel 2026-05-15.</footer>
+</article><article class="card" data-search="the boroughs netflix, releases 2026-05-21 sci-fi horror from the creators of stranger things. set in a retirement community where elderly residents start losing memories, energy, and years of their lives; the overlooked group must come together to stop something bigger. ig reel 2026-05-15. series (netflix may 2026)" data-cat="Series (Netflix May 2026)">
+  <div class="cardTop"><span class="pill">Series (Netflix May 2026)</span><span class="year">Netflix, releases 2026-05-21</span></div>
+  <h3>The Boroughs</h3>
+  <p>Sci-fi horror from the creators of Stranger Things. Set in a retirement community where elderly residents start losing memories, energy, and years of their lives; the overlooked group must come together to stop something bigger.</p>
+  
+  <footer>IG reel 2026-05-15.</footer>
+</article></div>
+</section><section class="rail" id="movies-top-10-plot-twists-countdown-from-a-movie-recommender">
+  <div class="sectionHead"><h2>Movies — Top 10 Plot Twists (countdown from a movie-recommender)</h2><span>10 פריטים</span></div>
+  <p class="note">From IG reel 2026-05-15 (counted from #10 to #1). All cited as having &quot;best plot twists in cinema&quot;:</p>
+  <div class="grid"><article class="card" data-search="old boy #10 iconic korean revenge thriller (2003, dir. park chan-wook). considered a touchstone for plot-twist endings.  movies — top 10 plot twists (countdown from a movie-recommender)" data-cat="Movies — Top 10 Plot Twists (countdown from a movie-recommender)">
+  <div class="cardTop"><span class="pill">Movies — Top 10 Plot Twists (countdown from a movie-recommender)</span><span class="year">#10</span></div>
+  <h3>Old Boy</h3>
+  <p>Iconic Korean revenge thriller (2003, dir. Park Chan-wook). Considered a touchstone for plot-twist endings.</p>
+  
+  
+</article><article class="card" data-search="prisoners #9 crime/thriller (2013), hugh jackman &amp; jake gyllenhaal. father investigates daughter&#x27;s disappearance; &quot;the plot twist, man&quot;.  movies — top 10 plot twists (countdown from a movie-recommender)" data-cat="Movies — Top 10 Plot Twists (countdown from a movie-recommender)">
+  <div class="cardTop"><span class="pill">Movies — Top 10 Plot Twists (countdown from a movie-recommender)</span><span class="year">#9</span></div>
+  <h3>Prisoners</h3>
+  <p>Crime/thriller (2013), Hugh Jackman &amp; Jake Gyllenhaal. Father investigates daughter&#x27;s disappearance; &quot;the plot twist, man&quot;.</p>
+  
+  
+</article><article class="card" data-search="the sixth sense #8 supernatural thriller (1999), bruce willis. &quot;the whole movie relies on this plot twist&quot;.  movies — top 10 plot twists (countdown from a movie-recommender)" data-cat="Movies — Top 10 Plot Twists (countdown from a movie-recommender)">
+  <div class="cardTop"><span class="pill">Movies — Top 10 Plot Twists (countdown from a movie-recommender)</span><span class="year">#8</span></div>
+  <h3>The Sixth Sense</h3>
+  <p>Supernatural thriller (1999), Bruce Willis. &quot;The whole movie relies on this plot twist&quot;.</p>
+  
+  
+</article><article class="card" data-search="knives out #7 murder mystery (2019), rian johnson. whole trilogy great, but the first one has a special place.  movies — top 10 plot twists (countdown from a movie-recommender)" data-cat="Movies — Top 10 Plot Twists (countdown from a movie-recommender)">
+  <div class="cardTop"><span class="pill">Movies — Top 10 Plot Twists (countdown from a movie-recommender)</span><span class="year">#7</span></div>
+  <h3>Knives Out</h3>
+  <p>Murder mystery (2019), Rian Johnson. Whole trilogy great, but the first one has a special place.</p>
+  
+  
+</article><article class="card" data-search="parasite #6 korean dark thriller (2019), bong joon-ho. &quot;many interesting plot twists&quot; — oscar winner.  movies — top 10 plot twists (countdown from a movie-recommender)" data-cat="Movies — Top 10 Plot Twists (countdown from a movie-recommender)">
+  <div class="cardTop"><span class="pill">Movies — Top 10 Plot Twists (countdown from a movie-recommender)</span><span class="year">#6</span></div>
+  <h3>Parasite</h3>
+  <p>Korean dark thriller (2019), Bong Joon-ho. &quot;Many interesting plot twists&quot; — Oscar winner.</p>
+  
+  
+</article><article class="card" data-search="gone girl #5 psychological thriller (2014), david fincher. &quot;absolutely phenomenal&quot;.  movies — top 10 plot twists (countdown from a movie-recommender)" data-cat="Movies — Top 10 Plot Twists (countdown from a movie-recommender)">
+  <div class="cardTop"><span class="pill">Movies — Top 10 Plot Twists (countdown from a movie-recommender)</span><span class="year">#5</span></div>
+  <h3>Gone Girl</h3>
+  <p>Psychological thriller (2014), David Fincher. &quot;Absolutely phenomenal&quot;.</p>
+  
+  
+</article><article class="card" data-search="the prestige #4 magicians/rivalry mystery (2006), christopher nolan. &quot;there are plot twists and there are plot twists&quot;.  movies — top 10 plot twists (countdown from a movie-recommender)" data-cat="Movies — Top 10 Plot Twists (countdown from a movie-recommender)">
+  <div class="cardTop"><span class="pill">Movies — Top 10 Plot Twists (countdown from a movie-recommender)</span><span class="year">#4</span></div>
+  <h3>The Prestige</h3>
+  <p>Magicians/rivalry mystery (2006), Christopher Nolan. &quot;There are plot twists and there are plot twists&quot;.</p>
+  
+  
+</article><article class="card" data-search="se7en #3 crime thriller (1995), david fincher. &quot;what&#x27;s in the box&quot;.  movies — top 10 plot twists (countdown from a movie-recommender)" data-cat="Movies — Top 10 Plot Twists (countdown from a movie-recommender)">
+  <div class="cardTop"><span class="pill">Movies — Top 10 Plot Twists (countdown from a movie-recommender)</span><span class="year">#3</span></div>
+  <h3>Se7en</h3>
+  <p>Crime thriller (1995), David Fincher. &quot;What&#x27;s in the box&quot;.</p>
+  
+  
+</article><article class="card" data-search="shutter island #2 psych thriller (2010), martin scorsese with dicaprio. &quot;you can&#x27;t miss it&quot;.  movies — top 10 plot twists (countdown from a movie-recommender)" data-cat="Movies — Top 10 Plot Twists (countdown from a movie-recommender)">
+  <div class="cardTop"><span class="pill">Movies — Top 10 Plot Twists (countdown from a movie-recommender)</span><span class="year">#2</span></div>
+  <h3>Shutter Island</h3>
+  <p>Psych thriller (2010), Martin Scorsese with DiCaprio. &quot;You can&#x27;t miss it&quot;.</p>
+  
+  
+</article><article class="card" data-search="fight club #1 cult classic (1999), david fincher. &quot;the moment you find out, you feel the immediate need to re-watch&quot;.  movies — top 10 plot twists (countdown from a movie-recommender)" data-cat="Movies — Top 10 Plot Twists (countdown from a movie-recommender)">
+  <div class="cardTop"><span class="pill">Movies — Top 10 Plot Twists (countdown from a movie-recommender)</span><span class="year">#1</span></div>
+  <h3>Fight Club</h3>
+  <p>Cult classic (1999), David Fincher. &quot;The moment you find out, you feel the immediate need to re-watch&quot;.</p>
+  
+  
+</article></div>
+</section><section class="rail" id="movies-if-you-loved-x-watch-y-plot-twist-pairings">
+  <div class="sectionHead"><h2>Movies — &quot;If you loved X, watch Y&quot; (plot-twist pairings)</h2><span>5 פריטים</span></div>
+  <p class="note">From IG reel 2026-05-19, episode 7 of a plot-twist series. Each is paired with a film Asi may already know.</p>
+  <div class="grid"><article class="card" data-search="session 9 2001 psychological horror. asbestos cleanup crew takes a job in an abandoned asylum; slow-burn dread with a chilling payoff.  movies — &quot;if you loved x, watch y&quot; (plot-twist pairings)" data-cat="Movies — &quot;If you loved X, watch Y&quot; (plot-twist pairings)">
+  <div class="cardTop"><span class="pill">Movies — &quot;If you loved X, watch Y&quot; (plot-twist pairings)</span><span class="year">2001</span></div>
+  <h3>Session 9</h3>
+  <p>Psychological horror. Asbestos cleanup crew takes a job in an abandoned asylum; slow-burn dread with a chilling payoff.</p>
+  <p class="pair">if you loved Shutter Island.</p>
+  
+</article><article class="card" data-search="the orphanage (el orfanato) 2007, spanish supernatural drama. woman returns to her childhood home when her son begins interacting with something unseen. &quot;twist hits so hard, go in blind.&quot;  movies — &quot;if you loved x, watch y&quot; (plot-twist pairings)" data-cat="Movies — &quot;If you loved X, watch Y&quot; (plot-twist pairings)">
+  <div class="cardTop"><span class="pill">Movies — &quot;If you loved X, watch Y&quot; (plot-twist pairings)</span><span class="year">2007, Spanish</span></div>
+  <h3>The Orphanage (El Orfanato)</h3>
+  <p>Supernatural drama. Woman returns to her childhood home when her son begins interacting with something unseen. &quot;Twist hits so hard, go in blind.&quot;</p>
+  <p class="pair">if you loved The Sixth Sense.</p>
+  
+</article><article class="card" data-search="the double 2013 dark surreal drama. timid man&#x27;s life spirals after his confident doppelgänger takes over everything. &quot;will make you deeply uncomfortable, you&#x27;ll think about it for days.&quot;  movies — &quot;if you loved x, watch y&quot; (plot-twist pairings)" data-cat="Movies — &quot;If you loved X, watch Y&quot; (plot-twist pairings)">
+  <div class="cardTop"><span class="pill">Movies — &quot;If you loved X, watch Y&quot; (plot-twist pairings)</span><span class="year">2013</span></div>
+  <h3>The Double</h3>
+  <p>Dark surreal drama. Timid man&#x27;s life spirals after his confident doppelgänger takes over everything. &quot;Will make you deeply uncomfortable, you&#x27;ll think about it for days.&quot;</p>
+  <p class="pair">if you loved Fight Club.</p>
+  
+</article><article class="card" data-search="the vanishing (spoorloos) 1988, dutch psychological thriller. man becomes obsessed with finding out what happened to his missing girlfriend. &quot;one of the most haunting endings ever — if you watch any film on this list, make it this one.&quot;  movies — &quot;if you loved x, watch y&quot; (plot-twist pairings)" data-cat="Movies — &quot;If you loved X, watch Y&quot; (plot-twist pairings)">
+  <div class="cardTop"><span class="pill">Movies — &quot;If you loved X, watch Y&quot; (plot-twist pairings)</span><span class="year">1988, Dutch</span></div>
+  <h3>The Vanishing (Spoorloos)</h3>
+  <p>Psychological thriller. Man becomes obsessed with finding out what happened to his missing girlfriend. &quot;One of the most haunting endings ever — if you watch any film on this list, make it this one.&quot;</p>
+  <p class="pair">if you loved Se7en.</p>
+  
+</article><article class="card" data-search="timecrimes (los cronocrímenes) 2007, spanish sci-fi/time-loop. man accidentally gets stuck in a time loop that becomes something darker. &quot;clever, tense, serious mind-bender, go in blind.&quot;  movies — &quot;if you loved x, watch y&quot; (plot-twist pairings)" data-cat="Movies — &quot;If you loved X, watch Y&quot; (plot-twist pairings)">
+  <div class="cardTop"><span class="pill">Movies — &quot;If you loved X, watch Y&quot; (plot-twist pairings)</span><span class="year">2007, Spanish</span></div>
+  <h3>Timecrimes (Los Cronocrímenes)</h3>
+  <p>Sci-fi/time-loop. Man accidentally gets stuck in a time loop that becomes something darker. &quot;Clever, tense, serious mind-bender, go in blind.&quot;</p>
+  <p class="pair">if you loved Ex Machina.</p>
+  
+</article></div>
+</section><section class="rail" id="series-limited-series-greats">
+  <div class="sectionHead"><h2>Series — Limited-series greats</h2><span>5 פריטים</span></div>
+  <p class="note">From IG reel DZ0fwFcJ6o7 by George Carmi, 2026-09-12. Framed as a top-5 “greatest limited series of all time.”</p>
+  <div class="grid"><article class="card" data-search="when they see us netflix, 2019 devastating true-crime/social-justice limited series about the central park five case; emotionally heavy. ig reel dz0fwfcj6o7 by georgecarmi, 2026-09-12. series — limited-series greats" data-cat="Series — Limited-series greats">
+  <div class="cardTop"><span class="pill">Series — Limited-series greats</span><span class="year">Netflix, 2019</span></div>
+  <h3>When They See Us</h3>
+  <p>Devastating true-crime/social-justice limited series about the Central Park Five case; emotionally heavy.</p>
+  
+  <footer>IG reel DZ0fwFcJ6o7 by georgecarmi, 2026-09-12.</footer>
+</article><article class="card" data-search="normal people 2020 intimate romantic drama; heartbreaking, quiet, and strongly written. ig reel dz0fwfcj6o7 by georgecarmi, 2026-09-12. series — limited-series greats" data-cat="Series — Limited-series greats">
+  <div class="cardTop"><span class="pill">Series — Limited-series greats</span><span class="year">2020</span></div>
+  <h3>Normal People</h3>
+  <p>Intimate romantic drama; heartbreaking, quiet, and strongly written.</p>
+  
+  <footer>IG reel DZ0fwFcJ6o7 by georgecarmi, 2026-09-12.</footer>
+</article><article class="card" data-search="true detective — season 1 hbo, 2014 anthology crime season with matthew mcconaughey and woody harrelson; dark, philosophical, and widely treated as elite tv. ig reel dz0fwfcj6o7 by georgecarmi, 2026-09-12. series — limited-series greats" data-cat="Series — Limited-series greats">
+  <div class="cardTop"><span class="pill">Series — Limited-series greats</span><span class="year">HBO, 2014</span></div>
+  <h3>True Detective — Season 1</h3>
+  <p>Anthology crime season with Matthew McConaughey and Woody Harrelson; dark, philosophical, and widely treated as elite TV.</p>
+  
+  <footer>IG reel DZ0fwFcJ6o7 by georgecarmi, 2026-09-12.</footer>
+</article><article class="card" data-search="chernobyl hbo, 2019 nuclear-disaster mini-series; already on the high-imdb list, reinforced here as a top limited-series pick. ig reel dz0fwfcj6o7 by georgecarmi, 2026-09-12. series — limited-series greats" data-cat="Series — Limited-series greats">
+  <div class="cardTop"><span class="pill">Series — Limited-series greats</span><span class="year">HBO, 2019</span></div>
+  <h3>Chernobyl</h3>
+  <p>Nuclear-disaster mini-series; already on the high-IMDb list, reinforced here as a top limited-series pick.</p>
+  
+  <footer>IG reel DZ0fwFcJ6o7 by georgecarmi, 2026-09-12.</footer>
+</article><article class="card" data-search="the haunting of hill house netflix, 2018 horror limited series; the reel ranks it #1 and calls it one of the greatest horror outings in film or tv. ig reel dz0fwfcj6o7 by georgecarmi, 2026-09-12. series — limited-series greats" data-cat="Series — Limited-series greats">
+  <div class="cardTop"><span class="pill">Series — Limited-series greats</span><span class="year">Netflix, 2018</span></div>
+  <h3>The Haunting of Hill House</h3>
+  <p>Horror limited series; the reel ranks it #1 and calls it one of the greatest horror outings in film or TV.</p>
+  
+  <footer>IG reel DZ0fwFcJ6o7 by georgecarmi, 2026-09-12.</footer>
+</article></div>
+</section><section class="rail" id="series-high-imdb-rated-from-globalstats-race-chart-2026-05-16">
+  <div class="sectionHead"><h2>Series — High IMDb-rated (from GlobalStats race chart, 2026-05-16)</h2><span>23 פריטים</span></div>
+  <p class="note">Filtered to high-rated, adult-skewing shows. Teen shows (Vampire Diaries, Teen Wolf, Hannah Montana, Glee, Arrow, etc.) excluded per Asi&#x27;s preference.</p>
+  <div class="grid"><article class="card" data-search="breaking bad amc, 2008–13 imdb 9.5. chemistry teacher turns meth maker. the benchmark of prestige tv.  series — high imdb-rated (from globalstats race chart, 2026-05-16)" data-cat="Series — High IMDb-rated (from GlobalStats race chart, 2026-05-16)">
+  <div class="cardTop"><span class="pill">Series — High IMDb-rated (from GlobalStats race chart, 2026-05-16)</span><span class="year">AMC, 2008–13</span></div>
+  <h3>Breaking Bad</h3>
+  <p>IMDb 9.5. Chemistry teacher turns meth maker. The benchmark of prestige TV.</p>
+  
+  
+</article><article class="card" data-search="band of brothers hbo, 2001 mini-series imdb 9.4. wwii easy company through europe. tom hanks/spielberg.  series — high imdb-rated (from globalstats race chart, 2026-05-16)" data-cat="Series — High IMDb-rated (from GlobalStats race chart, 2026-05-16)">
+  <div class="cardTop"><span class="pill">Series — High IMDb-rated (from GlobalStats race chart, 2026-05-16)</span><span class="year">HBO, 2001 mini-series</span></div>
+  <h3>Band of Brothers</h3>
+  <p>IMDb 9.4. WWII Easy Company through Europe. Tom Hanks/Spielberg.</p>
+  
+  
+</article><article class="card" data-search="chernobyl hbo, 2019 mini-series imdb 9.3. the 1986 nuclear disaster, dramatized. 5 episodes.  series — high imdb-rated (from globalstats race chart, 2026-05-16)" data-cat="Series — High IMDb-rated (from GlobalStats race chart, 2026-05-16)">
+  <div class="cardTop"><span class="pill">Series — High IMDb-rated (from GlobalStats race chart, 2026-05-16)</span><span class="year">HBO, 2019 mini-series</span></div>
+  <h3>Chernobyl</h3>
+  <p>IMDb 9.3. The 1986 nuclear disaster, dramatized. 5 episodes.</p>
+  
+  
+</article><article class="card" data-search="the wire hbo, 2002–08 imdb 9.3. baltimore drug trade through the eyes of cops, dealers, politicians, journalists. &quot;greatest tv show ever made&quot; consensus.  series — high imdb-rated (from globalstats race chart, 2026-05-16)" data-cat="Series — High IMDb-rated (from GlobalStats race chart, 2026-05-16)">
+  <div class="cardTop"><span class="pill">Series — High IMDb-rated (from GlobalStats race chart, 2026-05-16)</span><span class="year">HBO, 2002–08</span></div>
+  <h3>The Wire</h3>
+  <p>IMDb 9.3. Baltimore drug trade through the eyes of cops, dealers, politicians, journalists. &quot;Greatest TV show ever made&quot; consensus.</p>
+  
+  
+</article><article class="card" data-search="game of thrones hbo, 2011–19 imdb 9.2. epic fantasy political thriller. note: divisive final 2 seasons.  series — high imdb-rated (from globalstats race chart, 2026-05-16)" data-cat="Series — High IMDb-rated (from GlobalStats race chart, 2026-05-16)">
+  <div class="cardTop"><span class="pill">Series — High IMDb-rated (from GlobalStats race chart, 2026-05-16)</span><span class="year">HBO, 2011–19</span></div>
+  <h3>Game of Thrones</h3>
+  <p>IMDb 9.2. Epic fantasy political thriller. Note: divisive final 2 seasons.</p>
+  
+  
+</article><article class="card" data-search="the sopranos hbo, 1999–07 imdb 9.2. nj mafia boss in therapy. pioneer of prestige tv.  series — high imdb-rated (from globalstats race chart, 2026-05-16)" data-cat="Series — High IMDb-rated (from GlobalStats race chart, 2026-05-16)">
+  <div class="cardTop"><span class="pill">Series — High IMDb-rated (from GlobalStats race chart, 2026-05-16)</span><span class="year">HBO, 1999–07</span></div>
+  <h3>The Sopranos</h3>
+  <p>IMDb 9.2. NJ mafia boss in therapy. Pioneer of prestige TV.</p>
+  
+  
+</article><article class="card" data-search="better call saul amc, 2015–22 imdb 9.0. breaking bad prequel — jimmy mcgill&#x27;s slide into saul goodman.  series — high imdb-rated (from globalstats race chart, 2026-05-16)" data-cat="Series — High IMDb-rated (from GlobalStats race chart, 2026-05-16)">
+  <div class="cardTop"><span class="pill">Series — High IMDb-rated (from GlobalStats race chart, 2026-05-16)</span><span class="year">AMC, 2015–22</span></div>
+  <h3>Better Call Saul</h3>
+  <p>IMDb 9.0. Breaking Bad prequel — Jimmy McGill&#x27;s slide into Saul Goodman.</p>
+  
+  
+</article><article class="card" data-search="sherlock bbc, 2010–17 imdb 9.0. modern sherlock holmes with cumberbatch. 4 seasons of feature-length episodes.  series — high imdb-rated (from globalstats race chart, 2026-05-16)" data-cat="Series — High IMDb-rated (from GlobalStats race chart, 2026-05-16)">
+  <div class="cardTop"><span class="pill">Series — High IMDb-rated (from GlobalStats race chart, 2026-05-16)</span><span class="year">BBC, 2010–17</span></div>
+  <h3>Sherlock</h3>
+  <p>IMDb 9.0. Modern Sherlock Holmes with Cumberbatch. 4 seasons of feature-length episodes.</p>
+  
+  
+</article><article class="card" data-search="the office (us) nbc, 2005–13 imdb 9.0. mockumentary sitcom. light, infinitely rewatchable.  series — high imdb-rated (from globalstats race chart, 2026-05-16)" data-cat="Series — High IMDb-rated (from GlobalStats race chart, 2026-05-16)">
+  <div class="cardTop"><span class="pill">Series — High IMDb-rated (from GlobalStats race chart, 2026-05-16)</span><span class="year">NBC, 2005–13</span></div>
+  <h3>The Office (US)</h3>
+  <p>IMDb 9.0. Mockumentary sitcom. Light, infinitely rewatchable.</p>
+  
+  
+</article><article class="card" data-search="seinfeld nbc, 1989–98 imdb 8.9. &quot;the show about nothing&quot;. foundational sitcom.  series — high imdb-rated (from globalstats race chart, 2026-05-16)" data-cat="Series — High IMDb-rated (from GlobalStats race chart, 2026-05-16)">
+  <div class="cardTop"><span class="pill">Series — High IMDb-rated (from GlobalStats race chart, 2026-05-16)</span><span class="year">NBC, 1989–98</span></div>
+  <h3>Seinfeld</h3>
+  <p>IMDb 8.9. &quot;The show about nothing&quot;. Foundational sitcom.</p>
+  
+  
+</article><article class="card" data-search="the boys prime video, 2019– imdb 8.6. cynical superhero satire. violent and political.  series — high imdb-rated (from globalstats race chart, 2026-05-16)" data-cat="Series — High IMDb-rated (from GlobalStats race chart, 2026-05-16)">
+  <div class="cardTop"><span class="pill">Series — High IMDb-rated (from GlobalStats race chart, 2026-05-16)</span><span class="year">Prime Video, 2019–</span></div>
+  <h3>The Boys</h3>
+  <p>IMDb 8.6. Cynical superhero satire. Violent and political.</p>
+  
+  
+</article><article class="card" data-search="yellowstone paramount, 2018–24 imdb 8.6. modern western — montana ranching dynasty fighting developers, tribes, family.  series — high imdb-rated (from globalstats race chart, 2026-05-16)" data-cat="Series — High IMDb-rated (from GlobalStats race chart, 2026-05-16)">
+  <div class="cardTop"><span class="pill">Series — High IMDb-rated (from GlobalStats race chart, 2026-05-16)</span><span class="year">Paramount, 2018–24</span></div>
+  <h3>Yellowstone</h3>
+  <p>IMDb 8.6. Modern western — Montana ranching dynasty fighting developers, tribes, family.</p>
+  
+  
+</article><article class="card" data-search="stranger things netflix, 2016– imdb 8.6. 80s nostalgia + supernatural horror; final season pending.  series — high imdb-rated (from globalstats race chart, 2026-05-16)" data-cat="Series — High IMDb-rated (from GlobalStats race chart, 2026-05-16)">
+  <div class="cardTop"><span class="pill">Series — High IMDb-rated (from GlobalStats race chart, 2026-05-16)</span><span class="year">Netflix, 2016–</span></div>
+  <h3>Stranger Things</h3>
+  <p>IMDb 8.6. 80s nostalgia + supernatural horror; final season pending.</p>
+  
+  
+</article><article class="card" data-search="shogun fx, 2024 imdb 8.6. feudal japan epic, english navigator stranded with samurai. lavish production.  series — high imdb-rated (from globalstats race chart, 2026-05-16)" data-cat="Series — High IMDb-rated (from GlobalStats race chart, 2026-05-16)">
+  <div class="cardTop"><span class="pill">Series — High IMDb-rated (from GlobalStats race chart, 2026-05-16)</span><span class="year">FX, 2024</span></div>
+  <h3>Shogun</h3>
+  <p>IMDb 8.6. Feudal Japan epic, English navigator stranded with samurai. Lavish production.</p>
+  
+  
+</article><article class="card" data-search="dexter showtime, 2006–13 imdb 8.6. forensic blood-spatter analyst who is also a serial killer (of killers).  series — high imdb-rated (from globalstats race chart, 2026-05-16)" data-cat="Series — High IMDb-rated (from GlobalStats race chart, 2026-05-16)">
+  <div class="cardTop"><span class="pill">Series — High IMDb-rated (from GlobalStats race chart, 2026-05-16)</span><span class="year">Showtime, 2006–13</span></div>
+  <h3>Dexter</h3>
+  <p>IMDb 8.6. Forensic blood-spatter analyst who is also a serial killer (of killers).</p>
+  
+  
+</article><article class="card" data-search="the bear fx, 2022– imdb 8.5. stressed-out chicago restaurant kitchen. short tense episodes.  series — high imdb-rated (from globalstats race chart, 2026-05-16)" data-cat="Series — High IMDb-rated (from GlobalStats race chart, 2026-05-16)">
+  <div class="cardTop"><span class="pill">Series — High IMDb-rated (from GlobalStats race chart, 2026-05-16)</span><span class="year">FX, 2022–</span></div>
+  <h3>The Bear</h3>
+  <p>IMDb 8.5. Stressed-out Chicago restaurant kitchen. Short tense episodes.</p>
+  
+  
+</article><article class="card" data-search="shameless (us) showtime, 2011–21 imdb 8.5. chicago gallagher family barely surviving. dark comedy.  series — high imdb-rated (from globalstats race chart, 2026-05-16)" data-cat="Series — High IMDb-rated (from GlobalStats race chart, 2026-05-16)">
+  <div class="cardTop"><span class="pill">Series — High IMDb-rated (from GlobalStats race chart, 2026-05-16)</span><span class="year">Showtime, 2011–21</span></div>
+  <h3>Shameless (US)</h3>
+  <p>IMDb 8.5. Chicago Gallagher family barely surviving. Dark comedy.</p>
+  
+  
+</article><article class="card" data-search="westworld hbo, 2016–22 imdb 8.4. sci-fi western: ai hosts in an immersive theme park gain consciousness.  series — high imdb-rated (from globalstats race chart, 2026-05-16)" data-cat="Series — High IMDb-rated (from GlobalStats race chart, 2026-05-16)">
+  <div class="cardTop"><span class="pill">Series — High IMDb-rated (from GlobalStats race chart, 2026-05-16)</span><span class="year">HBO, 2016–22</span></div>
+  <h3>Westworld</h3>
+  <p>IMDb 8.4. Sci-fi western: AI hosts in an immersive theme park gain consciousness.</p>
+  
+  
+</article><article class="card" data-search="house of the dragon hbo, 2022– imdb 8.3. got prequel — targaryen civil war.  series — high imdb-rated (from globalstats race chart, 2026-05-16)" data-cat="Series — High IMDb-rated (from GlobalStats race chart, 2026-05-16)">
+  <div class="cardTop"><span class="pill">Series — High IMDb-rated (from GlobalStats race chart, 2026-05-16)</span><span class="year">HBO, 2022–</span></div>
+  <h3>House of the Dragon</h3>
+  <p>IMDb 8.3. GoT prequel — Targaryen civil war.</p>
+  
+  
+</article><article class="card" data-search="the walking dead amc, 2010–22 imdb 8.1. zombie post-apocalypse, runs long.  series — high imdb-rated (from globalstats race chart, 2026-05-16)" data-cat="Series — High IMDb-rated (from GlobalStats race chart, 2026-05-16)">
+  <div class="cardTop"><span class="pill">Series — High IMDb-rated (from GlobalStats race chart, 2026-05-16)</span><span class="year">AMC, 2010–22</span></div>
+  <h3>The Walking Dead</h3>
+  <p>IMDb 8.1. Zombie post-apocalypse, runs long.</p>
+  
+  
+</article><article class="card" data-search="the big bang theory cbs, 2007–19 imdb 8.1. physicist roommates sitcom.  series — high imdb-rated (from globalstats race chart, 2026-05-16)" data-cat="Series — High IMDb-rated (from GlobalStats race chart, 2026-05-16)">
+  <div class="cardTop"><span class="pill">Series — High IMDb-rated (from GlobalStats race chart, 2026-05-16)</span><span class="year">CBS, 2007–19</span></div>
+  <h3>The Big Bang Theory</h3>
+  <p>IMDb 8.1. Physicist roommates sitcom.</p>
+  
+  
+</article><article class="card" data-search="queen of tears tvn, 2024 korean imdb 8.2. wealthy chaebol heiress + small-town husband, marriage in crisis. hit k-drama.  series — high imdb-rated (from globalstats race chart, 2026-05-16)" data-cat="Series — High IMDb-rated (from GlobalStats race chart, 2026-05-16)">
+  <div class="cardTop"><span class="pill">Series — High IMDb-rated (from GlobalStats race chart, 2026-05-16)</span><span class="year">tvN, 2024 Korean</span></div>
+  <h3>Queen of Tears</h3>
+  <p>IMDb 8.2. Wealthy chaebol heiress + small-town husband, marriage in crisis. Hit K-drama.</p>
+  
+  
+</article><article class="card" data-search="friends nbc, 1994–04 imdb 8.9. classic sitcom. _marked watched 2026-05-16._  series — high imdb-rated (from globalstats race chart, 2026-05-16)" data-cat="Series — High IMDb-rated (from GlobalStats race chart, 2026-05-16)">
+  <div class="cardTop"><span class="pill">Series — High IMDb-rated (from GlobalStats race chart, 2026-05-16)</span><span class="year">NBC, 1994–04</span></div>
+  <h3>Friends</h3>
+  <p>IMDb 8.9. Classic sitcom. _Marked watched 2026-05-16._</p>
+  
+  
+</article></div>
+</section><div class="empty" id="empty">לא נמצאו תוצאות.</div></main>
+<script>
+const q=document.querySelector('#q'), cards=[...document.querySelectorAll('.card')], chips=[...document.querySelectorAll('.chip')], empty=document.querySelector('#empty'); let filter='all';
+function apply(){const term=q.value.trim().toLowerCase();let shown=0;cards.forEach(c=>{const okText=!term||c.dataset.search.includes(term);const okFilter=filter==='all'||c.dataset.cat.includes(filter);const ok=okText&&okFilter;c.style.display=ok?'flex':'none'; if(ok) shown++;});document.querySelectorAll('.rail').forEach(r=>{const any=[...r.querySelectorAll('.card')].some(c=>c.style.display!=='none');r.style.display=any?'block':'none';});empty.style.display=shown?'none':'block';}
+q.addEventListener('input',apply);chips.forEach(ch=>ch.onclick=()=>{chips.forEach(x=>x.classList.remove('active'));ch.classList.add('active');filter=ch.dataset.filter;apply();});
+</script>
+</body></html>
